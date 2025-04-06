@@ -30,9 +30,10 @@ export default function LogoCloud() {
               ].map((name) => (
                 <div key={name} className="flex">
                   <img
-                    className="mx-auto h-5 w-fit dark:invert"
+                    className="mx-auto h-5 w-fit dark:invert file:text-white"
                     src={`https://html.tailus.io/blocks/customers/${name}.svg`}
                     alt={`${name} Logo`}
+                    
                   />
                 </div>
               ))}

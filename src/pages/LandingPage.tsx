@@ -1,5 +1,6 @@
 import icon from '../assets/icons/blue-tick-icon.svg'
 import NavBar from './NavBar'
+import video1 from "../assets/videos/After.mp4"
 
 export default function LandingPage() {
   return (
@@ -10,7 +11,7 @@ export default function LandingPage() {
 
           {/* Left Content */}
           <div className="text-center xl:text-left max-w-xl">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
+            <h1 className="text-4xl sm:text-4xl md:text-6xl font-bold leading-tight">
               Expert social media management from only $99/mo
             </h1>
 
@@ -42,23 +43,22 @@ export default function LandingPage() {
           </div>
 
           {/* Right Videos */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-2xl">
+          <div className="grid grid-cols-2 gap-4   w-full mb-40">
             {/* Video 1 */}
-            <div className="flex flex-col items-center">
-              <video className="w-full rounded-lg" controls>
-                <source src="path_to_video_1.mp4" type="video/mp4" />
+            <div className="relative flex flex-col items-center md:-mr-10 rounded-xl  h-[50vh]   ">
+              <video className="w-auto rounded-xl h-[70vh] " controls>
+                <source src={video1} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
-              <p className="mt-2">Video 1</p>
-            </div>
+              <p className="absolute -top-4 left-10 mt-2 text-[18px] font-medium tracking-wider bg-amber-400 px-4 py-1 rounded-lg text-white">Before</p>            </div>
 
             {/* Video 2 */}
-            <div className="flex flex-col items-center">
-              <video className="w-full rounded-lg" controls>
-                <source src="path_to_video_2.mp4" type="video/mp4" />
+            <div className="relative flex flex-col items-center h-[50vh]">
+              <video className="w-auto h-[70vh] rounded-xl" controls>
+                <source src={video1} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
-              <p className="mt-2">Video 2</p>
+              <p className="absolute -top-4 left-5 mt-2 text-[18px] font-medium tracking-wider bg-blue-700 px-4 py-1 rounded-lg text-white">After</p>
             </div>
           </div>
 

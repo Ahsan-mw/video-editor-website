@@ -1,19 +1,11 @@
-import type { Config } from 'tailwindcss';
-
-const config: Config = {
+/** @type {import('tailwindcss').Config} */
+export default {
   content: [
-    './src/**/*.{html,js,jsx,ts,tsx}', // Adjust this according to your project structure
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}", // 👈 Required for Tailwind to scan your components
   ],
   theme: {
-    extend: {
-      colors: {
-        'custom-white': '#FFFFFF',
-        'custom-blue': '#145AFF',
-        'custom-dark': '#0D0E10',
-      },
-    },
+    extend: {},
   },
   plugins: [],
-};
-
-export default config;
+}

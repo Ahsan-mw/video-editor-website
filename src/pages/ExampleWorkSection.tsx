@@ -41,7 +41,7 @@ import {
               {videoList.map((video, index) => (
                 <CarouselItem
                   key={index}
-                  className="pl-2 md:pl-4 basis-full sm:basis-1/2 md:basis-1/3"
+                  className="pl-2 md:pl-4 basis-full sm:basis-1/2 md:basis-1/4"
                 >
                   <div className="rounded-xl overflow-hidden ">
                     <div className="relative max-w-[90vh] bg-red-900 aspect-[9/16] max-h-[80vh] mx-auto">
