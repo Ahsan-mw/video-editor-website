@@ -1,4 +1,4 @@
-import  { useState } from 'react';
+import  { useEffect, useState } from 'react';
 import logo from "../assets/images/logo.svg"
 import { GiHamburgerMenu } from "react-icons/gi";
 import { Button } from '@/components/ui/button';
@@ -10,6 +10,16 @@ import { GoArrowRight } from "react-icons/go";
 
 export default function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [ scrolled,setScrolled]=useState(false);
+  
+  useEffect(() => {
+    const onScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   const [isHovered,setIsHovered]=useState(false);
   // Toggle mobile menu visibility
@@ -20,7 +30,11 @@ export default function NavBar() {
   return (
     <div>
       {/* Navbar Container */}
-      <nav className="  fixed w-full z-10 top-0 ">
+      <nav className={`  fixed w-full z-10 top-0 ${
+          scrolled
+          ? "bg-white shadow-md translate-y-0 opacity-100"
+          : "bg-transparent translate-y-1 opacity-90"
+      }  `}>
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
 
           {/* Logo Section */}
@@ -72,7 +86,7 @@ export default function NavBar() {
             } w-full md:block md:w-auto`}
             id="navbar-default"
           >
-            <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+            <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg  md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0  dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
               {/* Home Link */}
               <li>
                 <a
