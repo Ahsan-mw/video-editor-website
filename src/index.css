@@ -15,3 +15,10 @@
   /* ... other variables */
 }
 
+
+.home-bg {
+  background-image: url("./assets/images/home_background.svg");
+
+  background-size: cover;
+  background-repeat: no-repeat;
+}

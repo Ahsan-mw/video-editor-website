@@ -20,11 +20,11 @@ export default function NavBar() {
   return (
     <div>
       {/* Navbar Container */}
-      <nav className="bg-white  fixed w-full z-10 top-2 ">
+      <nav className="  fixed w-full z-10 top-0 ">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
 
           {/* Logo Section */}
-          <a href="https://flowbite.com/" className="flex items-center space-x-3 rtl:space-x-reverse">
+          <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
             <img
               src={logo}
           
@@ -35,7 +35,7 @@ export default function NavBar() {
 
           {/* Mobile Menu Toggle Button */}
        <div className='flex items-center justify-center gap-2'>
-      <Button>
+      <Button className='md:hidden'>
         
        <div
       className="bg-black text-white flex items-center cursor-pointer group px-4 py-3 rounded-lg" // Added group class to the button
