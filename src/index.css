@@ -1,24 +1,12 @@
-
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@custom-variant dark (&:is(.dark *));
-:root {
-  --custom-white: #FFFFFF;
-  --custom-blue: #145AFF;
-  --custom-dark: #0D0E10;
-
-  /* Existing root variables */
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  /* ... other variables */
-}
 
 
 .home-bg {
   background-image: url("./assets/images/home_background.svg");
-
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+
