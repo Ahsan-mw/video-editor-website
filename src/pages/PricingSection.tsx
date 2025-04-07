@@ -1,3 +1,6 @@
+import PricingPlans from "@/components/app-component/PricingCard";
+import { GrGallery } from "react-icons/gr";
+
 
 export default function PricingSection() {
   return (
@@ -12,6 +15,21 @@ export default function PricingSection() {
         Pay one flat monthly rate. No contracts. No surprises. Just results.
       </p>
     </div>
+    <PricingPlans/>
+
+  <div className="bg-red-600 felx ">
+    <div className="flex flex-col gap-4 p-4">
+        <div className="flex justify-between">
+        <GrGallery />
+        <p className="p-1 bg-gray-600 text-black rounded-sm">SOCIAL MEDIA</p>
+
+        </div>
+
+    </div>
+
+
+
+  </div>
     </section>
   )
 }
