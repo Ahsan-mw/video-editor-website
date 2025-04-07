@@ -1,12 +1,13 @@
 import icon from '../assets/icons/blue-tick-icon.svg'
 import NavBar from './NavBar'
 import video1 from "../assets/videos/After.mp4"
+import crossicon from '../assets/icons/icons8-cross.svg'
 
 export default function LandingPage() {
   return (
     <>
       <NavBar />
-      <div className="home-bg min-h-screen bg-no-repeat bg-cover pt-32">
+      <div className="home-bg min-h-screen bg-no-repeat bg-cover pt-32 pb-32">
         <div className="container mx-auto px-4 flex flex-col xl:flex-row items-center justify-between gap-10">
 
           {/* Left Content */}
@@ -45,20 +46,56 @@ export default function LandingPage() {
           {/* Right Videos */}
           <div className="grid grid-cols-2 gap-4   w-full mb-40">
             {/* Video 1 */}
-            <div className="relative flex flex-col items-center md:-mr-10 rounded-xl  h-[50vh]   ">
-              <video className="w-auto rounded-xl h-[70vh] " controls>
+            <div className="relative flex flex-col items-start  rounded-xl  h-[50vh]   ">
+              <video className="w-auto rounded-xl h-[60vh] " controls>
                 <source src={video1} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
-              <p className="absolute -top-4 left-10 mt-2 text-[18px] font-medium tracking-wider bg-amber-400 px-4 py-1 rounded-lg text-white">Before</p>            </div>
+              <p className="absolute -top-4 left-10 mt-2 text-[18px] font-medium tracking-wider bg-amber-400 px-4 py-1 rounded-lg text-white">Before</p>       
+              <ul className="mt-4 space-y-2 text-sm text-left text-gray-700">
+  <li className="flex items-start gap-2">
+    <img src={crossicon} alt="cross icon" className="w-4 h-4 mt-[2px]" />
+    <span>Inconsistent branding </span>
+  </li>
+  <li className="flex items-start gap-2">
+  <img src={crossicon} alt="cross icon" className="w-4 h-4 mt-[2px]" />
+  <span>lacking uniqueness</span>
+  </li>
+  <li className="flex items-start gap-2">
+  <img src={crossicon} alt="cross icon" className="w-4 h-4 mt-[2px]" />
+  <span>Repetitive content formats</span>
+  </li>
+  <li className="flex items-start gap-2">
+  <img src={crossicon} alt="cross icon" className="w-4 h-4 mt-[2px]" />
+  <span>poor viewer retention</span>
+  </li>
+</ul>
+
+                   </div>
 
             {/* Video 2 */}
-            <div className="relative flex flex-col items-center h-[50vh]">
-              <video className="w-auto h-[70vh] rounded-xl" controls>
+            <div className="relative flex flex-col items-center md:items-start h-[50vh]">
+              <video className="w-auto h-[60vh] rounded-xl" controls>
                 <source src={video1} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
               <p className="absolute -top-4 left-5 mt-2 text-[18px] font-medium tracking-wider bg-blue-700 px-4 py-1 rounded-lg text-white">After</p>
+              <ul className="mt-4 space-y-2 text-[14px] text-left text-gray-700">
+  <li className="flex items-start gap-2">
+    <img src={icon} alt="" className="w-[16px] h-[16px] mt-1" />
+    <span>consistent brand visuals</span>
+  </li>
+  <li className="flex items-start gap-2">
+  <img src={icon} alt="" className="w-[16px] h-[16px] mt-1" />    <span>Custom-edited creativity</span>
+  </li>
+  <li className="flex items-start gap-2">
+  <img src={icon} alt="" className="w-[16px] h-[16px] mt-1" />    <span>dynamic video formats</span>
+  </li>
+  <li className="flex items-start gap-2">
+  <img src={icon} alt="" className="w-[16px] h-[16px] mt-1" />    <span>Strategic storytelling </span>
+  </li>
+</ul>
+
             </div>
           </div>
 
